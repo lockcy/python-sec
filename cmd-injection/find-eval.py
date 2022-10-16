@@ -11,7 +11,7 @@ for item in ''.__class__.__mro__[-1].__subclasses__():
     try:
         if 'eval' in item.__init__.__globals__['__builtins__']:
             print(num, item)
-            print(item.__init__.__globals__['__builtins__']['eval']("2+2"))
+            # print(item.__init__.__globals__['__builtins__']['eval']("2+2"))
         num += 1
     except:
         num += 1
